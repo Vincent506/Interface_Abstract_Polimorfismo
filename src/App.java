@@ -33,10 +33,13 @@ public class App {
         vericarsite = site.autenticar();
         verificarapi = api.autenticar();
         //verificação da entrada de dados
-        if (verficarapp == true && vericarsite == true && verificarapi == true) {
+        if ((verficarapp == true)&&(verificarapi == true)&&(vericarsite == true)) {
             aplicativo.exibirDados();
-            site.exibirDados();
+            System.out.println("Autenticação por impressão digital.... ");
             api.exibirDados();
+            System.out.println("Autenticação por token.... ");
+            site.exibirDados();
+            System.out.println("Autenticação por login de usuario e senha.... ");
         }else{
             System.out.println("Usuario não cadastrado...");
             // se algum campo não for preenchido a autentição não vai ser efetuada.
